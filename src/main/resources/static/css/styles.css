@@ -1,0 +1,25 @@
+img.image {
+    width: 10%;
+    height: 10%;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+h1.header {
+    text-align: center;
+}
+
+div.btn-home{
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+div.login{
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+}
+

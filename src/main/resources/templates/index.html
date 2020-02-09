@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SMS Service</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+</head>
+<body>
+<h1 class="header">SMS Service</h1>
+
+<form method="post" th:action="@{/sendsms}">
+            <div class="form-group">
+                <label for="phoneNumber">Input phone number</label>
+                <input name="phoneNumber" type="text" class="form-control" id="phoneNumber" aria-describedby="phoneHelp"
+                       placeholder="Enter phone number">
+                <small id="phoneHelp" class="form-text text-muted">Enter phone number</small>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <input name="message" type="text" class="form-control" id="message" placeholder="message_text">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        <div th:if="${error}">
+            Unable to send message. Check phone number.
+        </div>
+</form>
